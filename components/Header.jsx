@@ -68,7 +68,7 @@ const Header = ({ drop, setdrop }) => {
               </svg>
             </div>
             <input
-              className="flex px-5 pl-10 h-10 w-[70%] rounded-md border border-gray-300 outline-none bg-transparent py-2 text-sm placeholder:text-gray-400"
+              className="hidden lg:flex px-5 pl-10 h-10 w-[70%] rounded-md border border-gray-300 outline-none bg-transparent py-2 text-sm placeholder:text-gray-400"
               type="email"
               placeholder="Email"
             ></input>
