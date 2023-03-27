@@ -18,7 +18,7 @@ const Banner = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <button class="bg-NavColor font-semibold text-white py-2 px-6 border rounded-md">
+          <button className="bg-NavColor font-semibold text-white py-2 px-6 border rounded-md">
             Get Started
           </button>
         </div>

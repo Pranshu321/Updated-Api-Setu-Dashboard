@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import Banner from "../components/Banner";
-import FileUploader from "../components/FileUploader";
 import Header from "../components/Header";
-import Input from "../components/Input";
-import PopUp from "../components/PopUp";
 import Sidebar from "../components/Sidebar";
-import Table from "../components/Table";
+import Videos from "../components/Videos";
 
 const Dashboard = () => {
   const [drop, setdrop] = useState(true);
@@ -20,9 +17,7 @@ const Dashboard = () => {
         </div>
         <div className="w-[80%] mx-5 rounded-lg my-2 border-2 border-[#E6E9EC] lg:w-[100%] bg-dashbordGray flex flex-col gap-y-5">
           <Banner />
-          <Input />
-          <FileUploader />
-          <Table />
+          <Videos />
         </div>
       </div>
     </>

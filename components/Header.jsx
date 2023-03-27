@@ -94,13 +94,10 @@ const Header = ({ drop, setdrop }) => {
                 AC
               </div>
             </div>
-            <div className="">
-              <Link
-                href="#"
-                className="inline-block text-sm py-3 leading-none border rounded text-TextBlue border-white mt-4 lg:mt-0"
-              >
+            <div>
+              <div className="inline-block text-sm py-3 leading-none border rounded text-TextBlue border-white mt-4 lg:mt-0">
                 <Dropdown main={"XYZ Media"} options={["Profile", "Log Out"]} />
-              </Link>
+              </div>
             </div>
           </div>
         </div>
