@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
+import LowerTags from "../components/LowerTags";
 import Sidebar from "../components/Sidebar";
 import SideInfo from "../components/SideInfo";
 import UpperSideInfo from "../components/UpperSideInfo";
@@ -18,11 +19,12 @@ const Dashboard = () => {
           <Sidebar navOpen={drop} />
         </div>
         <div className="flex w-full mx-5 rounded-lg my-2 border-2 border-[#E6E9EC] lg:w-[100%] bg-dashbordGray">
-          <div className="w-[75%] flex flex-col gap-y-5">
+          <div className="w-[95%] lg:w-[75%] flex flex-col gap-y-5">
             <Banner />
             <Videos />
+            <LowerTags />
           </div>
-          <div className="w-[24%]">
+          <div className="lg:flex lg:flex-col hidden w-[24%]">
             <UpperSideInfo />
             <SideInfo />
           </div>

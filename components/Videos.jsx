@@ -7,7 +7,7 @@ const Videos = () => {
       <div className="font-semibold text-NavColor text-base pl-6">
         Helpful Videos
       </div>
-      <div className="flex gap-x-3 mx-5">
+      <div className="flex gap-x-1 ml-3 lg:gap-x-3  lg:mx-5">
         <Cards />
         <Cards />
         <Cards />
