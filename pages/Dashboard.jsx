@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import SideInfo from "../components/SideInfo";
+import UpperSideInfo from "../components/UpperSideInfo";
 import Videos from "../components/Videos";
 
 const Dashboard = () => {
@@ -22,6 +23,7 @@ const Dashboard = () => {
             <Videos />
           </div>
           <div className="w-[24%]">
+            <UpperSideInfo />
             <SideInfo />
           </div>
         </div>
