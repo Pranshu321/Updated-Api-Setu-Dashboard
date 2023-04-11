@@ -6,9 +6,11 @@ import Sidebar from "../components/Sidebar";
 import SideInfo from "../components/SideInfo";
 import UpperSideInfo from "../components/UpperSideInfo";
 import Videos from "../components/Videos";
+import SubBanner from "../components/SubBanner";
 
 const Dashboard = () => {
   const [drop, setdrop] = useState(true);
+  const [details, setdetails] = useState(false);
   return (
     <>
       <div>
@@ -20,7 +22,7 @@ const Dashboard = () => {
         </div>
         <div className="flex w-full mx-5 rounded-lg my-2 border-2 border-[#E6E9EC] lg:w-[100%] bg-dashbordGray">
           <div className="w-[95%] lg:w-[75%] flex flex-col gap-y-5">
-            <Banner />
+            {!details ? <Banner details={setdetails} /> : <SubBanner />}
             <Videos />
             <LowerTags />
           </div>

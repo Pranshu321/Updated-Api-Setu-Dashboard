@@ -22,6 +22,7 @@ const Sidebar = ({ navOpen }) => {
   const [drop2, setdrop2] = useState(false);
   const [drop3, setdrop3] = useState(false);
   const [drop4, setdrop4] = useState(false);
+  const [Subdrop, setSubdrop] = useState(false);
   const [side, setside] = useState(true);
   return (
     <div>
@@ -64,7 +65,7 @@ const Sidebar = ({ navOpen }) => {
           </div>
           <div className="overflow-y-auto overflow-x-hidden flex-grow">
             <ul className="flex flex-col py-4 space-y-1">
-              <li>
+              <div>
                 <Link
                   href="#"
                   className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-NavColor pr-6"
@@ -76,11 +77,12 @@ const Sidebar = ({ navOpen }) => {
                     My Workspace
                   </span>
                 </Link>
-              </li>
-              <li onClick={() => setdrop(!drop)}>
+              </div>
+              <div>
                 <Link
                   href="#"
                   className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-NavColor pr-6"
+                  onClick={() => setdrop(!drop)}
                 >
                   <span className="inline-flex justify-center items-center ml-4">
                     <TbTransform size={20} />
@@ -101,34 +103,58 @@ const Sidebar = ({ navOpen }) => {
                 <div
                   className={`${
                     !drop ? "hidden" : null
-                  } flex flex-col gap-y-5 my-5 justify-center items-start pl-7 text-gray-600 hover:text-gray-800`}
+                  } flex flex-col gap-y-2 my-3 justify-center items-start pl-9 text-gray-600 hover:text-gray-800`}
                 >
-                  <div className="flex justify-center items-center gap-x-1">
-                    <span className="inline-flex justify-center items-center ml-4">
-                      <SiMoleculer size={20} />
+                  <div
+                    className="flex justify-between w-[90%] cursor-pointer"
+                    onClick={() => setSubdrop(!Subdrop)}
+                  >
+                    <span className="ml-2 font-bold text-NavColor text-sm tracking-wide truncate">
+                      Cowin's API
                     </span>
-                    <span className="ml-2 text-sm tracking-wide truncate">
-                      Subscribed API's
+                    <span className="inline-flex justify-center items-center">
+                      {!Subdrop ? (
+                        <MdKeyboardArrowDown size={20} />
+                      ) : (
+                        <MdKeyboardArrowUp size={20} />
+                      )}
                     </span>
                   </div>
-                  <div className="flex justify-center items-center gap-x-1">
-                    <span className="inline-flex justify-center items-center ml-4">
-                      <BsArrowRepeat size={20} color="4b5563" />
-                    </span>
-                    <span className="ml-2 text-sm tracking-wide truncate">
-                      Published API's
-                    </span>
+                  <div
+                    className={`${
+                      !Subdrop ? "hidden" : null
+                    } flex flex-col pl-5 justify-center items-start text-gray-600 hover:text-gray-800`}
+                  >
+                    <div className="flex justify-center items-center gap-x-1">
+                      <span className="ml-1 text-sm tracking-wide truncate">
+                        Collections
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex justify-center items-center gap-x-1">
-                    <span className="inline-flex justify-center items-center ml-4">
-                      <AiOutlineCheckCircle size={20} />
-                    </span>
-                    <span className="ml-2 text-sm tracking-wide truncate">
-                      Org Subscription
-                    </span>
+                  <div className="pl-6 mt-2">
+                    <li className="text-NavColor font-semibold list-disc">
+                      Listing
+                    </li>
+                  </div>
+                  <div className="flex flex-col gap-y-1 pl-5">
+                    <div className="flex  gap-x-1">
+                      <span className="text-sm tracking-wide truncate">
+                        API Monitoring
+                      </span>
+                    </div>
+                    <div className="flex gap-x-1">
+                      <span className="text-sm tracking-wide truncate">
+                        Pricing
+                      </span>
+                    </div>
+                    <div className="flex gap-x-1">
+                      <span className="text-sm tracking-wide truncate">
+                        Settings
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </li>
+              </div>
               <li onClick={() => setdrop2(!drop2)}>
                 <Link
                   href="#"

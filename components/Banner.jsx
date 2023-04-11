@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 
-const Banner = () => {
+const Banner = ({ details }) => {
   return (
     <div className="flex justify-center max-h-max min-h-52 mt-8">
       <div className="bg-white w-[95%] rounded-lg p-4 lg:p-8 border-2 border-[#E6E9EC] flex flex-col gap-y-7">
@@ -18,7 +18,10 @@ const Banner = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <button className="bg-NavColor font-semibold text-white py-2 px-6 border rounded-md">
+          <button
+            onClick={() => details(true)}
+            className="bg-NavColor font-semibold text-white py-2 px-6 border rounded-md"
+          >
             Get Started
           </button>
         </div>
