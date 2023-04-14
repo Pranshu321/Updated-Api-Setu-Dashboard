@@ -47,7 +47,7 @@ const Sidebar = ({ navOpen }) => {
       <div
         className={`${
           side ? "hidden" : null
-        } min-h-screen lg:flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800`}
+        } min-h-screen lg:flex z-50 flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800`}
       >
         <div
           className={`absolute flex flex-col ${

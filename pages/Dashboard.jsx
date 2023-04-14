@@ -7,6 +7,7 @@ import SideInfo from "../components/SideInfo";
 import UpperSideInfo from "../components/UpperSideInfo";
 import Videos from "../components/Videos";
 import SubBanner from "../components/SubBanner";
+import ManualForm from "../components/Screen/ManualForm";
 
 const Dashboard = () => {
   const [drop, setdrop] = useState(true);
@@ -21,10 +22,13 @@ const Dashboard = () => {
           <Sidebar navOpen={drop} />
         </div>
         <div className="flex w-full mx-5 rounded-lg my-2 border-2 border-[#E6E9EC] lg:w-[100%] bg-dashbordGray">
-          <div className="w-[95%] lg:w-[75%] flex flex-col gap-y-5">
-            {!details ? <Banner details={setdetails} /> : <SubBanner />}
+          <div className="w-[95%] lg:w-[75%] flex flex-col items-stretch gap-y-5">
+            {/* {!details ? <Banner details={setdetails} /> : <SubBanner />}
             <Videos />
-            <LowerTags />
+            <LowerTags /> */}
+            <div className="lg:p-5 p-3">
+              <ManualForm />
+            </div>
           </div>
           <div className="lg:flex lg:flex-col hidden w-[24%]">
             <UpperSideInfo />

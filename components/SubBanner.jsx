@@ -5,11 +5,11 @@ const SubBanner = () => {
   return (
     <div className="p-4">
       <div className="flex flex-col gap-y-4 p-4 bg-white border-2 border-gray-200 rounded-lg">
-        <div className="text-xl font-semibold pl-6 text-NavColor">
+        <div className="text-lg text-center lg:text-start lg:text-xl font-semibold lg:pl-6 text-NavColor">
           Get started by adding your first API
         </div>
         <div className="flex items-center justify-center w-full px-6">
-          <div className="flex flex-col items-center justify-center w-full h-36 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100">
+          <label className="flex flex-col items-center justify-center w-full h-36 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100">
             <div className="flex flex-col items-center justify-center pt-5 pb-6">
               <svg
                 aria-hidden="true"
@@ -37,7 +37,7 @@ const SubBanner = () => {
               </p>
             </div>
             <input id="dropzone-file" type="file" className="hidden" />
-          </div>
+          </label>
         </div>
         <div className="w-full justify-center items-center flex flex-col">
           <div className="text-lg text-gray-500">OR</div>
@@ -45,7 +45,7 @@ const SubBanner = () => {
             <div>
               <HiOutlinePencilAlt size={20} className="text-NavColor" />
             </div>
-            <div className="text-base font-semibold">
+            <div className="text-sm lg:text-base font-semibold">
               Enter Details Manually
             </div>
           </div>
