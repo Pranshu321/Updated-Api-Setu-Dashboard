@@ -10,6 +10,8 @@ import SubBanner from "../components/SubBanner";
 import ManualForm from "../components/Screen/ManualForm";
 import RightViewListing from "../components/Screen/RightViewListing";
 import LeftStepper from "../components/Screen/LeftStepper";
+import Breadcrumps from "../utils/Breadcrumps";
+import Tabs from "../utils/Tabs";
 
 const Dashboard = () => {
   const [drop, setdrop] = useState(true);
@@ -34,6 +36,8 @@ const Dashboard = () => {
               <LeftStepper />
             </div>
             <div className="lg:p-5 p-3 w-[100%]">
+              <Breadcrumps />
+              <Tabs />
               <ManualForm />
             </div>
           </div>

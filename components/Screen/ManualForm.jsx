@@ -1,6 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function ManualForm() {
+  const [selectedFile, setSelectedFile] = useState();
+  const [preview, setPreview] = useState(
+    "https://user-images.githubusercontent.com/86917304/232464639-95920674-4259-4862-a30e-54b59f1916cf.png"
+  );
+  // create a preview as a side effect, whenever selected file is changed
+  useEffect(() => {
+    if (!selectedFile) {
+      setPreview(undefined);
+      return;
+    }
+
+    const objectUrl = URL.createObjectURL(selectedFile);
+    setPreview(objectUrl);
+
+    // free memory when ever this component is unmounted
+    return () => URL.revokeObjectURL(objectUrl);
+  }, [selectedFile]);
+
+  const onSelectFile = (e) => {
+    if (!e.target.files || e.target.files.length === 0) {
+      setSelectedFile(undefined);
+      return;
+    }
+
+    // I've kept this example simple by using the first image instead of multiple
+    setSelectedFile(e.target.files[0]);
+  };
+
   return (
     <div className="bg-white -z-20 px-3 lg:px-5 border-2 border-gray-200 rounded-lg pb-5">
       <form>
@@ -14,7 +42,10 @@ export default function ManualForm() {
                       <div className="flex gap-x-5">
                         <div>
                           <img
-                            src="https://user-images.githubusercontent.com/86917304/232464639-95920674-4259-4862-a30e-54b59f1916cf.png"
+                            src={
+                              preview ||
+                              "https://user-images.githubusercontent.com/86917304/232464639-95920674-4259-4862-a30e-54b59f1916cf.png"
+                            }
                             alt="image"
                             width={140}
                             height={140}
@@ -27,6 +58,7 @@ export default function ManualForm() {
                           <div className="w-36 border-2 py-1 cursor-pointer rounded-lg border-NavColor text-NavColor font-semibold flex justify-center">
                             <label className="cursor-pointer">
                               <input
+                                onChange={onSelectFile}
                                 type="file"
                                 name="file"
                                 id="file"

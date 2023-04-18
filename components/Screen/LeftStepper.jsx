@@ -4,18 +4,21 @@ import React from "react";
 const LeftStepper = () => {
   return (
     <div className="flex flex-col">
+      <div className="bg-[#E1F0FB] text-NavColor font-semibold p-3 mt-4 ml-4 rounded-md">
+        Publishing steps
+      </div>
       <ul
         className="relative m-0 w-full list-none overflow-hidden p-0 transition-[height] duration-200 ease-in-out"
         data-te-stepper-init=""
         data-te-stepper-type="vertical"
       >
         {/*First item*/}
-        <li className="relative h-fit after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-2.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
+        <li className="relative h-12 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
           <div className="flex cursor-pointer items-center p-6 leading-[1.3rem] no-underline after:bg-[#e0e0e0] after:content-['']  focus:outline-none">
             <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
               1
             </span>
-            <span className="text-NavColor font-semibold text-sm flex justify-center items-center gap-x-2 after:absolute after:flex after:text-[0.8rem] after:content-[data-content] ">
+            <span className="text-NavColor font-semibold text-xs flex justify-center items-center gap-x-2 after:absolute after:flex after:text-[0.8rem] after:content-[data-content] ">
               API Overview
               <span className="mt-1">
                 <svg
@@ -35,12 +38,12 @@ const LeftStepper = () => {
           </div>
         </li>
         {/*Second item*/}
-        <li className="relative h-fit after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-2.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
+        <li className="relative h-12 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
           <div className="flex cursor-pointer items-center p-6 leading-[1.3rem] no-underline after:bg-[#e0e0e0] after:content-['']  focus:outline-none">
             <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
               2
             </span>
-            <span className="text-NavColor text-sm font-semibold flex justify-center items-center gap-x-2 after:absolute after:flex after:text-[0.8rem] after:content-[data-content] ">
+            <span className="text-NavColor text-xs font-semibold flex justify-center items-center gap-x-2 after:absolute after:flex after:text-[0.8rem] after:content-[data-content] ">
               API Documentation
               <span className="mt-1">
                 <svg
@@ -60,12 +63,12 @@ const LeftStepper = () => {
           </div>
         </li>
         {/*Third item*/}
-        <li className="relative h-fit after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-2.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
+        <li className="relative h-12 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
           <div className="flex cursor-pointer items-center p-6 leading-[1.3rem] no-underline after:bg-[#e0e0e0] after:content-['']  focus:outline-none">
             <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
               3
             </span>
-            <span className="text-NavColor font-semibold flex justify-center items-center gap-x-2 text-sm after:absolute after:flex after:text-[0.8rem] after:content-[data-content] ">
+            <span className="text-NavColor font-semibold flex justify-center items-center gap-x-2 text-xs after:absolute after:flex after:text-[0.8rem] after:content-[data-content] ">
               Authentication
               <span className="mt-1">
                 <svg
@@ -84,12 +87,12 @@ const LeftStepper = () => {
             </span>
           </div>
         </li>
-        <li className="relative h-fit after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-2.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
+        <li className="relative h-14 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
           <div className="flex cursor-pointer items-center p-6 leading-[1.3rem] no-underline after:bg-[#e0e0e0] after:content-['']  focus:outline-none">
             <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
               4
             </span>
-            <span className="text-NavColor font-semibold flex justify-center items-center text-sm after:absolute after:flex after:text-[0.8rem] after:content-[data-content] ">
+            <span className="text-NavColor font-semibold flex justify-center items-center text-xs after:absolute after:flex after:text-[0.8rem] after:content-[data-content] ">
               Endpoint Documentation
               <span className="-mt-4">
                 <svg
@@ -108,12 +111,12 @@ const LeftStepper = () => {
             </span>
           </div>
         </li>
-        <li className="relative h-fit after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-2.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
+        <li className="relative h-12 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
           <div className="flex cursor-pointer items-center p-6 leading-[1.3rem] no-underline after:bg-[#e0e0e0] after:content-['']  focus:outline-none">
             <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
               5
             </span>
-            <span className="text-NavColor flex justify-center items-center gap-x-2 font-semibold text-sm after:absolute after:flex after:text-[0.8rem] after:content-[data-content] ">
+            <span className="text-NavColor flex justify-center items-center gap-x-2 font-semibold text-xs after:absolute after:flex after:text-[0.8rem] after:content-[data-content] ">
               Headers
               <span className="mt-1">
                 <svg
@@ -137,7 +140,7 @@ const LeftStepper = () => {
             <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
               6
             </span>
-            <span className="text-NavColor flex justify-center items-center font-semibold text-sm after:absolute after:flex after:text-[0.8rem] after:content-[data-content] ">
+            <span className="text-NavColor flex justify-center items-center font-semibold text-xs after:absolute after:flex after:text-[0.8rem] after:content-[data-content] ">
               Request & Response Body
               <span className="-mt-4">
                 <svg
