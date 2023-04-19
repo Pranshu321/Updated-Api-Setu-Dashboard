@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 export default function ManualForm() {
   const [selectedFile, setSelectedFile] = useState();
+  const [selectedFileName, setSelectedFileName] = useState("");
   const [preview, setPreview] = useState(
     "https://user-images.githubusercontent.com/86917304/232464639-95920674-4259-4862-a30e-54b59f1916cf.png"
   );
@@ -26,6 +27,7 @@ export default function ManualForm() {
     }
 
     // I've kept this example simple by using the first image instead of multiple
+    setSelectedFileName(e.target.files[0].name);
     setSelectedFile(e.target.files[0]);
   };
 
@@ -64,7 +66,9 @@ export default function ManualForm() {
                                 id="file"
                                 className="hidden"
                               />
-                              Upload a file
+                              {selectedFileName === ""
+                                ? "Upload a file"
+                                : selectedFileName}
                             </label>
                           </div>
                           <div>Maximum Size: 500x500px, jpeg/png</div>
