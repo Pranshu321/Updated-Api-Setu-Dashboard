@@ -1,7 +1,7 @@
 import React from "react";
 import { HiOutlinePencilAlt } from "react-icons/hi";
 
-const SubBanner = () => {
+const SubBanner = ({ setNext }) => {
   return (
     <div className="p-4">
       <div className="flex flex-col gap-y-4 p-4 bg-white border-2 border-gray-200 rounded-lg">
@@ -45,7 +45,10 @@ const SubBanner = () => {
             <div>
               <HiOutlinePencilAlt size={20} className="text-NavColor" />
             </div>
-            <div className="text-sm lg:text-base font-semibold">
+            <div
+              onClick={() => setNext(1)}
+              className="text-sm lg:text-base font-semibold"
+            >
               Enter Details Manually
             </div>
           </div>

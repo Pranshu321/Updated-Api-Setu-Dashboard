@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function ManualForm() {
+export default function ManualForm({ NextPage }) {
   const [selectedFile, setSelectedFile] = useState();
   const [selectedFileName, setSelectedFileName] = useState("");
   const [preview, setPreview] = useState(
@@ -205,6 +205,7 @@ export default function ManualForm() {
           </button>
           <button
             type="submit"
+            onClick={() => NextPage(2)}
             className="rounded-md px-4 bg-indigo-600 lg:px-16 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Save & Next

@@ -19,7 +19,9 @@ const Banner = ({ details }) => {
         </div>
         <div className="flex justify-center">
           <button
-            onClick={() => details(true)}
+            onClick={() => {
+              details(true);
+            }}
             className="bg-NavColor font-semibold text-white py-2 px-6 border rounded-md"
           >
             Get Started

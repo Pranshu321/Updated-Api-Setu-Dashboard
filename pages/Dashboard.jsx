@@ -17,6 +17,7 @@ import Documentation_Form from "../components/Screen/API Documentation/Documenta
 const Dashboard = () => {
   const [drop, setdrop] = useState(true);
   const [details, setdetails] = useState(false);
+  const [NextPage, setNextPage] = useState(0);
   return (
     <>
       <div>
@@ -27,26 +28,59 @@ const Dashboard = () => {
           <Sidebar navOpen={drop} />
         </div>
         <div className="flex w-full mx-5 rounded-lg my-2 border-2 border-[#E6E9EC] lg:w-[100%] bg-dashbordGray">
-          <div className="w-[95%] lg:w-[75%] flex flex-col lg:flex-row lg:gap-y-0 items-stretch gap-y-5">
-            {/* {!details ? <Banner details={setdetails} /> : <SubBanner />}
-            <Videos />
-            <LowerTags /> */}
+          <div
+            className={`w-[95%] lg:w-[75%] flex flex-col ${
+              NextPage != 0 ? "lg:flex-row" : "lg:flex-col"
+            } lg:gap-y-0 items-stretch gap-y-5`}
+          >
+            {NextPage === 0 ? (
+              !details ? (
+                <Banner details={setdetails} />
+              ) : (
+                <SubBanner setNext={setNextPage} />
+              )
+            ) : null}
+            {NextPage === 0 ? (
+              <div>
+                <Videos />
+                <LowerTags />
+              </div>
+            ) : null}
             <div className="lg:flex lg:flex-col hidden w-[34%]">
               {/* <UpperSideInfo />
               <SideInfo /> */}
-              <LeftStepper />
+              {NextPage > 0 ? <LeftStepper /> : null}
             </div>
             <div className="lg:p-5 p-3 w-[100%]">
-              <Breadcrumps />
-              <Tabs />
-              <ManualForm />
-              {/* <Documentation_Form /> */}
+              {NextPage != 0 && <Breadcrumps />}
+              {NextPage > 1 ? (
+                <div>
+                  <Tabs />
+                </div>
+              ) : NextPage != 0 ? (
+                <div>
+                  <a
+                    href="#"
+                    aria-current="page"
+                    className="inline-block p-2 text-NavColor font-semibold border-b-2 border-textOrange  rounded-t-lg active"
+                  >
+                    API Overview
+                  </a>
+                </div>
+              ) : null}
+              {NextPage === 1 ? <ManualForm NextPage={setNextPage} /> : null}
+              {NextPage === 2 && <Documentation_Form />}
             </div>
           </div>
           <div className="lg:flex lg:flex-col hidden w-[24%]">
-            {/* <UpperSideInfo />
-            <SideInfo /> */}
-            <RightViewListing />
+            {NextPage === 0 ? (
+              <div>
+                <UpperSideInfo />
+                <SideInfo />
+              </div>
+            ) : (
+              <RightViewListing />
+            )}
           </div>
         </div>
       </div>
