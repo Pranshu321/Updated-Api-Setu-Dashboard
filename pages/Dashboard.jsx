@@ -13,6 +13,7 @@ import LeftStepper from "../components/Screen/LeftStepper";
 import Breadcrumps from "../utils/Breadcrumps";
 import Tabs from "../utils/Tabs";
 import Documentation_Form from "../components/Screen/API Documentation/Documentation_Form";
+import Authentication from "../components/Screen/API Documentation/Authentication";
 
 const Dashboard = () => {
   const [drop, setdrop] = useState(true);
@@ -69,7 +70,7 @@ const Dashboard = () => {
                 </div>
               ) : null}
               {NextPage === 1 ? <ManualForm NextPage={setNextPage} /> : null}
-              {NextPage === 2 && <Documentation_Form />}
+              {NextPage === 2 && <Authentication />}
             </div>
           </div>
           <div className="lg:flex lg:flex-col hidden w-[24%]">

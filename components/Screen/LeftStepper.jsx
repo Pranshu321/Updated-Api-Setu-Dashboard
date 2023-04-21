@@ -1,7 +1,11 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { TbTransform } from "react-icons/tb";
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
 const LeftStepper = () => {
+  const [Subdrop, setSubdrop] = useState(false);
+  const [drop, setdrop] = useState(false);
   return (
     <div className="flex flex-col">
       <div className="bg-[#E1F0FB] text-NavColor font-semibold p-3 mt-4 ml-4 rounded-md">
@@ -163,12 +167,54 @@ const LeftStepper = () => {
       <div className="border-t border-gray-300 ml-3">
         <Link
           href="#"
-          className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-200 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-NavColor pr-6"
+          className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-NavColor pr-6"
+          onClick={() => setdrop(!drop)}
         >
-          <span className="ml-2 text-base text-NavColor font-semibold tracking-wide truncate">
-            Listing Page
-          </span>
+          <div className="flex justify-between w-full">
+            <span className="ml-2 text-NavColor font-semibold text-sm tracking-wide truncate">
+              Co-WIN Protected APIs
+            </span>
+            <span className="inline-flex justify-center items-center">
+              {!drop ? (
+                <MdKeyboardArrowDown size={20} />
+              ) : (
+                <MdKeyboardArrowUp size={20} />
+              )}
+            </span>
+          </div>
         </Link>
+        <div
+          className={`${
+            !drop ? "hidden" : null
+          } flex flex-col gap-y-2 my-3 justify-center items-start pl-9 text-gray-600 hover:text-gray-800`}
+        >
+          <div
+            className="flex justify-between w-[90%] cursor-pointer"
+            onClick={() => setSubdrop(!Subdrop)}
+          >
+            <span className="ml-2 font-bold text-NavColor text-sm tracking-wide truncate">
+              v1.0.0
+            </span>
+            <span className="inline-flex justify-center items-center">
+              {!Subdrop ? (
+                <MdKeyboardArrowDown size={20} />
+              ) : (
+                <MdKeyboardArrowUp size={20} />
+              )}
+            </span>
+          </div>
+          <div
+            className={`${
+              !Subdrop ? "hidden" : null
+            } flex flex-col pl-5 justify-center items-start text-gray-600 hover:text-gray-800`}
+          >
+            <div className="flex justify-center items-center gap-x-1">
+              <span className="ml-1 text-sm tracking-wide truncate">
+                Endpoint 01
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
