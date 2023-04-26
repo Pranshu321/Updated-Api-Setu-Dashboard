@@ -15,6 +15,7 @@ import Tabs from "../utils/Tabs";
 import Documentation_Form from "../components/Screen/API Documentation/Documentation_Form";
 import Authentication from "../components/Screen/API Documentation/Authentication";
 import Headers_Design from "../components/Screen/EndPoint Documentation/Headers_Design";
+import Request_Frontend from "../components/Screen/Request Body/Request_Frontend";
 
 const Dashboard = () => {
   const [drop, setdrop] = useState(true);
@@ -51,13 +52,13 @@ const Dashboard = () => {
             <div className="lg:flex lg:flex-col hidden w-[34%]">
               {/* <UpperSideInfo />
               <SideInfo /> */}
-              {NextPage > 0 ? <LeftStepper /> : null}
+              {NextPage > 0 ? <LeftStepper setNextPage={setNextPage} /> : null}
             </div>
             <div className="lg:p-5 p-3 w-[100%]">
               {NextPage != 0 && <Breadcrumps />}
               {NextPage > 1 ? (
                 <div>
-                  <Tabs />
+                  <Tabs NextPage={NextPage} />
                 </div>
               ) : NextPage != 0 ? (
                 <div>
@@ -71,8 +72,10 @@ const Dashboard = () => {
                 </div>
               ) : null}
               {NextPage === 1 ? <ManualForm NextPage={setNextPage} /> : null}
-              {NextPage === 2 && <Authentication />}
-              {/* {NextPage === 2 && <Headers_Design />} */}
+              {(NextPage === 2 || NextPage === 4) && <Documentation_Form />}
+              {(NextPage === 3 || NextPage === 5) && <Authentication />}
+              {NextPage === 6 && <Headers_Design />}
+              {NextPage === 7 && <Request_Frontend />}
             </div>
           </div>
           <div className="lg:flex lg:flex-col hidden w-[24%]">

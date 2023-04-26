@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { TbTransform } from "react-icons/tb";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
-const LeftStepper = () => {
+const LeftStepper = ({ setNextPage }) => {
   const [Subdrop, setSubdrop] = useState(false);
   const [drop, setdrop] = useState(false);
   return (
@@ -17,7 +17,10 @@ const LeftStepper = () => {
         data-te-stepper-type="vertical"
       >
         {/*First item*/}
-        <li className="relative h-12 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
+        <li
+          onClick={() => setNextPage(1)}
+          className="relative h-12 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']"
+        >
           <div className="flex cursor-pointer items-center p-6 leading-[1.3rem] no-underline after:bg-[#e0e0e0] after:content-['']  focus:outline-none">
             <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
               1
@@ -42,7 +45,10 @@ const LeftStepper = () => {
           </div>
         </li>
         {/*Second item*/}
-        <li className="relative h-12 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
+        <li
+          onClick={() => setNextPage(2)}
+          className="relative h-12 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']"
+        >
           <div className="flex cursor-pointer items-center p-6 leading-[1.3rem] no-underline after:bg-[#e0e0e0] after:content-['']  focus:outline-none">
             <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
               2
@@ -67,7 +73,10 @@ const LeftStepper = () => {
           </div>
         </li>
         {/*Third item*/}
-        <li className="relative h-12 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
+        <li
+          onClick={() => setNextPage(3)}
+          className="relative h-12 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']"
+        >
           <div className="flex cursor-pointer items-center p-6 leading-[1.3rem] no-underline after:bg-[#e0e0e0] after:content-['']  focus:outline-none">
             <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
               3
@@ -91,7 +100,10 @@ const LeftStepper = () => {
             </span>
           </div>
         </li>
-        <li className="relative h-14 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
+        <li
+          onClick={() => setNextPage(4)}
+          className="relative h-14 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']"
+        >
           <div className="flex cursor-pointer items-center p-6 leading-[1.3rem] no-underline after:bg-[#e0e0e0] after:content-['']  focus:outline-none">
             <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
               4
@@ -115,7 +127,10 @@ const LeftStepper = () => {
             </span>
           </div>
         </li>
-        <li className="relative h-12 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']">
+        <li
+          onClick={() => setNextPage(6)}
+          className="relative h-12 after:absolute after:left-[2.45rem] after:top-[3.6rem] after:mt-px after:h-[calc(100%-0.45rem)] after:w-px after:bg-[#e0e0e0] after:content-['']"
+        >
           <div className="flex cursor-pointer items-center p-6 leading-[1.3rem] no-underline after:bg-[#e0e0e0] after:content-['']  focus:outline-none">
             <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
               5
@@ -139,7 +154,11 @@ const LeftStepper = () => {
             </span>
           </div>
         </li>
-        <li data-te-stepper-step-ref="" className="relative h-fit">
+        <li
+          onClick={() => setNextPage(7)}
+          data-te-stepper-step-ref=""
+          className="relative h-fit"
+        >
           <div className="flex cursor-pointer items-center p-6 leading-[1.3rem] no-underline after:bg-[#e0e0e0] after:content-['']  focus:outline-none">
             <span className="mr-3 flex h-[1.938rem] w-[1.938rem] items-center justify-center rounded-full bg-[#ebedef] text-sm font-medium text-[#40464f]">
               6
