@@ -7,7 +7,7 @@ const Request_Frontend = () => {
       <div className="bg-white px-3 lg:px-5 border-2 border-gray-200 rounded-lg pb-5">
         <div className="h-full">
           <div className="space-y-3 h-[90%]">
-            <div>
+            <div className="w-full">
               <div className="flex flex-col gap-y-4 p-2 pt-5">
                 <div className="flex gap-x-5">
                   <div className="flex gap-x-2 items-center">
@@ -51,9 +51,9 @@ const Request_Frontend = () => {
                   <textarea
                     name="summary"
                     id="summary"
-                    cols="80"
+                    cols="20"
                     rows="10"
-                    className="outline-none border-2 p-3 rounded-md border-gray-300"
+                    className="w-[18rem] mr-3 lg:mr-0 lg:w-full outline-none border-2 p-3 rounded-md border-gray-300"
                   ></textarea>
                 </div>
               </div>
@@ -135,9 +135,9 @@ const Request_Frontend = () => {
                   <textarea
                     name="summary"
                     id="summary"
-                    cols="80"
+                    cols="20"
                     rows="10"
-                    className="outline-none border-2 p-3 mt-2 rounded-md border-gray-300"
+                    className="w-[18rem] lg:w-full outline-none border-2 p-3 mt-2 rounded-md border-gray-300"
                   ></textarea>
                 </div>
               </div>

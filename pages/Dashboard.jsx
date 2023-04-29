@@ -16,6 +16,7 @@ import Documentation_Form from "../components/Screen/API Documentation/Documenta
 import Authentication from "../components/Screen/API Documentation/Authentication";
 import Headers_Design from "../components/Screen/EndPoint Documentation/Headers_Design";
 import Request_Frontend from "../components/Screen/Request Body/Request_Frontend";
+import SideResponse from "../components/Screen/Request Body/SideResponse";
 
 const Dashboard = () => {
   const [drop, setdrop] = useState(true);
@@ -72,7 +73,8 @@ const Dashboard = () => {
                 </div>
               ) : null}
               {NextPage === 1 ? <ManualForm NextPage={setNextPage} /> : null}
-              {(NextPage === 2 || NextPage === 4) && <Documentation_Form />}
+              {/* {(NextPage === 2 || NextPage === 4) && <Documentation_Form />} */}
+              {(NextPage === 2 || NextPage === 4) && <SideResponse />}
               {(NextPage === 3 || NextPage === 5) && <Authentication />}
               {NextPage === 6 && <Headers_Design />}
               {NextPage === 7 && <Request_Frontend />}
