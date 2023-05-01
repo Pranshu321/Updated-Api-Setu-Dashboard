@@ -143,6 +143,19 @@ const Request_Frontend = () => {
               </div>
             </div>
           </div>
+          <div className="flex justify-between mx-3 items-center">
+            <div className="text-xs">
+              Your API is ready, do you want to publish it right now?
+            </div>
+            <div className="flex gap-x-2">
+              <div class="bg-transparent text-NavColor font-semibold py-2 px-6 cursor-pointer border border-NavColor  rounded">
+                No
+              </div>
+              <div class="bg-NavColor text-white cursor-pointer font-bold py-2 px-6 rounded">
+                Yes
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

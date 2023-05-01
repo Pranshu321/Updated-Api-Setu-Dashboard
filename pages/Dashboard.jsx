@@ -17,6 +17,7 @@ import Authentication from "../components/Screen/API Documentation/Authenticatio
 import Headers_Design from "../components/Screen/EndPoint Documentation/Headers_Design";
 import Request_Frontend from "../components/Screen/Request Body/Request_Frontend";
 import SideResponse from "../components/Screen/Request Body/SideResponse";
+import Check from "./Check";
 
 const Dashboard = () => {
   const [drop, setdrop] = useState(true);
@@ -33,7 +34,7 @@ const Dashboard = () => {
         </div>
         <div className="flex w-full mx-5 rounded-lg my-2 border-2 border-[#E6E9EC] lg:w-[100%] bg-dashbordGray">
           <div
-            className={`w-[95%] lg:w-[75%] flex flex-col ${
+            className={`w-[95%] lg:w-[100%] flex flex-col ${
               NextPage != 0 ? "lg:flex-row" : "lg:flex-col"
             } lg:gap-y-0 items-stretch gap-y-5`}
           >
@@ -50,7 +51,7 @@ const Dashboard = () => {
                 <LowerTags />
               </div>
             ) : null}
-            <div className="lg:flex lg:flex-col hidden w-[34%]">
+            <div className="lg:flex lg:flex-col hidden w-[24%]">
               {/* <UpperSideInfo />
               <SideInfo /> */}
               {NextPage > 0 ? <LeftStepper setNextPage={setNextPage} /> : null}
@@ -74,13 +75,14 @@ const Dashboard = () => {
               ) : null}
               {NextPage === 1 ? <ManualForm NextPage={setNextPage} /> : null}
               {/* {(NextPage === 2 || NextPage === 4) && <Documentation_Form />} */}
-              {(NextPage === 2 || NextPage === 4) && <SideResponse />}
+              {/* {(NextPage === 2 || NextPage === 4) && <SideResponse />} */}
+              {(NextPage === 2 || NextPage === 4) && <Check />}
               {(NextPage === 3 || NextPage === 5) && <Authentication />}
               {NextPage === 6 && <Headers_Design />}
               {NextPage === 7 && <Request_Frontend />}
             </div>
           </div>
-          <div className="lg:flex lg:flex-col hidden w-[24%]">
+          {/* <div className="lg:flex lg:flex-col hidden w-[24%]">
             {NextPage === 0 ? (
               <div>
                 <UpperSideInfo />
@@ -89,7 +91,7 @@ const Dashboard = () => {
             ) : (
               <RightViewListing />
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </>
