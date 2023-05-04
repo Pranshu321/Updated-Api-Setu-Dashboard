@@ -1,5 +1,6 @@
 import React from "react";
 import Chart from "../../utils/Chart";
+import AnalyticsTable from "../../utils/AnalyticsTable";
 
 const ApiAnalytics = () => {
   return (
@@ -146,6 +147,9 @@ const ApiAnalytics = () => {
           API has been published and awaiting approval. Once approved by your
           admin, it will become public.
         </div>
+      </div>
+      <div>
+        <AnalyticsTable />
       </div>
       <div className="mt-10">
         <Chart />

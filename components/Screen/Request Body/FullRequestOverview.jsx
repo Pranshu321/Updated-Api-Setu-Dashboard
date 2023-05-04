@@ -1,6 +1,6 @@
 import React from "react";
-import Request_Frontend from "../components/Screen/Request Body/Request_Frontend";
-import SideResponse from "../components/Screen/Request Body/SideResponse";
+import Request_Frontend from "./Request_Frontend";
+import SideResponse from "./SideResponse";
 
 const Check = () => {
   return (

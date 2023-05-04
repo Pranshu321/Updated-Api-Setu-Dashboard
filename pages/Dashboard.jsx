@@ -17,7 +17,7 @@ import Authentication from "../components/Screen/API Documentation/Authenticatio
 import Headers_Design from "../components/Screen/EndPoint Documentation/Headers_Design";
 import Request_Frontend from "../components/Screen/Request Body/Request_Frontend";
 import SideResponse from "../components/Screen/Request Body/SideResponse";
-import Check from "./Check";
+import FullRequestOverview from "../components/Screen/Request Body/FullRequestOverview";
 import IconSidebar from "../utils/IconSidebar";
 import ApiAnalytics from "../components/Screen/ApiAnalytics";
 
@@ -78,7 +78,7 @@ const Dashboard = () => {
               {NextPage === 1 ? <ManualForm NextPage={setNextPage} /> : null}
               {(NextPage === 2 || NextPage === 4) && <ApiAnalytics />}
               {/* {(NextPage === 2 || NextPage === 4) && <SideResponse />} */}
-              {/* {(NextPage === 2 || NextPage === 4) && <Check />} */}
+              {/* {(NextPage === 2 || NextPage === 4) && <FullRequestOverview />} */}
               {(NextPage === 3 || NextPage === 5) && <Authentication />}
               {NextPage === 6 && <Headers_Design />}
               {NextPage === 7 && <Request_Frontend />}
