@@ -6,7 +6,7 @@ const AnalyticsTable = () => {
       <div className="w-fit text-NavColor ml-1 font-semibold border-b-2 border-textOrange">
         Logs
       </div>
-      <div className="relative shadow-md">
+      <div className="relative shadow-md overflow-y-auto">
         <table className="w-full text-sm text-left text-gray-500">
           <thead className="text-xs text-gray-700 uppercase bg-[#E1F0FB] ">
             <tr>

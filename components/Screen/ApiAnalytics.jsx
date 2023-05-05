@@ -5,14 +5,16 @@ import AnalyticsTable from "../../utils/AnalyticsTable";
 const ApiAnalytics = () => {
   return (
     <div>
-      <div className="flex gap-y-8 h-48 flex-col bg-white mt-4 border-2 border-gray-200 p-3 rounded-lg">
+      <div className="flex gap-y-4 lg:gap-y-8 h-48 flex-col bg-white mt-4 border-2 border-gray-200 p-3 rounded-lg">
         <div className="w-fit text-NavColor font-semibold border-b-2 border-textOrange">
           Status
         </div>
-        <div className="flex justify-center gap-x-5">
-          <div className="flex flex-col gap-y-2  justify-center items-center">
+        <div className="flex justify-center gap-x-2 lg:gap-x-5">
+          <div className="flex flex-col gap-y-2 items-center">
             <div className="flex gap-x-3 items-center">
-              <div className="text-gray-400 text-sm">API Compliance</div>
+              <div className="text-gray-400 text-sm lg:text-left text-center">
+                API Compliance
+              </div>
               <div>
                 <svg
                   width="7"
@@ -46,7 +48,7 @@ const ApiAnalytics = () => {
               </svg>
             </div>
           </div>
-          <div className="flex flex-col gap-y-2  justify-center items-center">
+          <div className="flex flex-col gap-y-2 justify-center items-center">
             <div className="flex gap-x-3 items-center">
               <div className="text-gray-400 text-sm">API Production</div>
               <div>

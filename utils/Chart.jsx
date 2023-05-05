@@ -46,10 +46,11 @@ const Chart = () => {
           </div>
         </div>
         <div className="pt-12 mt-5 border-l-2 border-b-2 border-gray-400">
-          <div className="">
+          <div className="overflow-y-auto">
             <svg
               width="879"
               height="173"
+              className="overflow-y-auto"
               viewBox="0 0 879 173"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
