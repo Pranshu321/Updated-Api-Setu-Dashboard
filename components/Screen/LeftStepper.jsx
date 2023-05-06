@@ -238,6 +238,60 @@ const LeftStepper = ({ setNextPage }) => {
         </li>
       </ul>
       <div className="border-t mt-3 border-gray-300 ml-3">
+        <div className="flex justify-between items-center mt-4">
+          <input
+            className="hidden lg:flex px-5 pl-1 h-8 w-[60%] rounded-md border border-gray-300 outline-none bg-transparent py-1 text-xs placeholder:text-gray-400"
+            type="email"
+            placeholder="Email"
+          ></input>
+          <div className="flex items-center gap-x-2">
+            <div>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.5 6H10.5M6 10.5V1.5"
+                  stroke="#9CA3AF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.25 5.25H15.75"
+                  stroke="#9CA3AF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M4.5 9H13.5"
+                  stroke="#9CA3AF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M7.5 12.75H10.5"
+                  stroke="#9CA3AF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
         <Link
           href="#"
           className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-NavColor pr-6"

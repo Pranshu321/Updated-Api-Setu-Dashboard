@@ -45,11 +45,10 @@ const SubBanner = ({ setNext }) => {
             <div>
               <HiOutlinePencilAlt size={20} className="text-NavColor" />
             </div>
-            <div
-              onClick={() => setNext(1)}
-              className="text-sm lg:text-base font-semibold"
-            >
-              Enter Details Manually
+            <div onClick={() => setNext(1)} className="cursor-pointer">
+              <div className="text-sm lg:text-base font-semibold">
+                Enter Details Manually
+              </div>
             </div>
           </div>
         </div>

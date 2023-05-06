@@ -3,7 +3,7 @@ import React from "react";
 const Breadcrumps = () => {
   return (
     <div>
-      <div className="rounded-lg bg-white pb-5">
+      <div className="rounded-lg bg-transparent pb-5">
         <ul className="flex items-center">
           <li className="flex items-center">
             <a
@@ -35,7 +35,7 @@ const Breadcrumps = () => {
               href="javascript:void(0)"
               className="text-gray-400 hover:text-primary text-base font-semibold"
             >
-              New Collection
+              Listing Page
             </a>
             <span className="px-3">
               <svg
@@ -56,7 +56,7 @@ const Breadcrumps = () => {
             </span>
           </li>
           <li className="text-gray-400 text-base font-semibold">
-            Documentation
+            API Overview
           </li>
         </ul>
       </div>
