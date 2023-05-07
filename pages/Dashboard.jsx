@@ -20,11 +20,14 @@ import SideResponse from "../components/Screen/Request Body/SideResponse";
 import FullRequestOverview from "../components/Screen/Request Body/FullRequestOverview";
 import IconSidebar from "../utils/IconSidebar";
 import ApiAnalytics from "../components/Screen/ApiAnalytics";
+import BreadcrumpsDoc from "../utils/Breadcrumps/BreadcrumpsDoc";
+import BreadcrumpsEndpoint from "../utils/Breadcrumps/BreadcrupsEndpoint";
 
 const Dashboard = () => {
   const [drop, setdrop] = useState(true);
   const [details, setdetails] = useState(false);
   const [NextPage, setNextPage] = useState(0);
+  const [content, setContent] = useState("");
   return (
     <>
       <div>
@@ -59,8 +62,21 @@ const Dashboard = () => {
               {NextPage > 0 ? <LeftStepper setNextPage={setNextPage} /> : null}
             </div>
             <div className="lg:p-5 p-3 w-[100%]">
-              {NextPage != 0 && <Breadcrumps />}
-              {/* {NextPage > 1 ? (
+              {NextPage != 0 && <BreadcrumpsEndpoint last={content} />}
+              {NextPage === 4 && (
+                <div class="flex my-3 border-2 rounded-md border-gray-200">
+                  <span class="inline-flex mr-2 py-1 items-center px-10 text-NavColor font-semibold text-[16px] border-r-2 border-gray-300 rounded-l-md">
+                    POST
+                  </span>
+                  <input
+                    type="text"
+                    id="website-admin"
+                    class="bg-gray-50 text-NavColor block flex-1 min-w-0 w-full text-sm p-2.5"
+                    value={"/v2/auth/generateOTP"}
+                  />
+                </div>
+              )}
+              {NextPage > 1 ? (
                 <div>
                   <Tabs NextPage={NextPage} />
                 </div>
@@ -74,14 +90,18 @@ const Dashboard = () => {
                     API Overview
                   </a>
                 </div>
-              ) : null} */}
+              ) : null}
               {NextPage === 1 ? <ManualForm NextPage={setNextPage} /> : null}
-              {(NextPage === 2 || NextPage === 4) && <ApiAnalytics />}
+              {NextPage === 2 || NextPage === 4 ? (
+                <Documentation_Form setContent={setContent} />
+              ) : null}
               {/* {(NextPage === 2 || NextPage === 4) && <SideResponse />} */}
               {/* {(NextPage === 2 || NextPage === 4) && <FullRequestOverview />} */}
-              {(NextPage === 3 || NextPage === 5) && <Authentication />}
-              {NextPage === 6 && <Headers_Design />}
-              {NextPage === 7 && <Request_Frontend />}
+              {(NextPage === 3 || NextPage === 5) && (
+                <Authentication setContent={setContent} />
+              )}
+              {NextPage === 6 && <Headers_Design setContent={setContent} />}
+              {NextPage === 7 && <Request_Frontend setContent={setContent} />}
             </div>
           </div>
           {/* <div className="lg:flex lg:flex-col hidden w-[24%]">

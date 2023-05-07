@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-export default function Authentication() {
+export default function Authentication({ setContent }) {
+  useEffect(() => {
+    setContent("Authentication");
+  }, []);
   return (
     <div className="bg-white px-3 lg:px-5 border-2 border-gray-200 rounded-lg pb-5">
       <div className="h-[80vh]">

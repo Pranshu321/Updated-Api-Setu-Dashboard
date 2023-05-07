@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Request_Tabs from "../../../utils/Request_Tabs";
 
-const Request_Frontend = () => {
+const Request_Frontend = ({ setContent }) => {
+  useEffect(() => {
+    setContent("Requests");
+  }, []);
   return (
     <div>
       <div className="bg-white px-3 lg:px-5 border-2 border-gray-200 rounded-lg pb-5">

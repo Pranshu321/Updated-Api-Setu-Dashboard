@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const Headers_Design = () => {
+const Headers_Design = ({ setContent }) => {
+  useEffect(() => {
+    setContent("Headers");
+  }, []);
   return (
     <div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
