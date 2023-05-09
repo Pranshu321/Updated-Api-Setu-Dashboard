@@ -1,10 +1,10 @@
 import React from "react";
 
-const Tabs = ({ NextPage }) => {
+const Tabs = ({ NextPage , setContent , setNext }) => {
   return (
     <div>
       <ul className="flex flex-wrap gap-x-5 text-sm font-medium text-center text-gray-500 border-b border-gray-200">
-        <li className="mr-2">
+        <li className="mr-2" onClick={()=>{setContent("Documentation"); setNext(1); }}>
           <a
             href="#"
             aria-current="page"
@@ -13,7 +13,7 @@ const Tabs = ({ NextPage }) => {
             Documentation
           </a>
         </li>
-        <li className="mr-2">
+        <li className="mr-2" onClick={()=>{setContent("Authentication"); NextPage>2?setNext(5):setNext(3); }}>
           <a
             href="#"
             className="inline-block p-2 rounded-t-lg hover:text-gray-600 hover:bg-gray-50"
@@ -32,7 +32,7 @@ const Tabs = ({ NextPage }) => {
             </a>
           </li>
         ) : (
-          <div className="flex gap-x-5">
+          <div className="flex gap-x-5" onClick={()=>{setContent("Headers"); setNext(6); }}>
             <li className="mr-2">
               <a
                 href="#"
@@ -41,7 +41,7 @@ const Tabs = ({ NextPage }) => {
                 Headers
               </a>
             </li>
-            <li className="mr-2">
+            <li className="mr-2" onClick={()=> setContent("Requests") }>
               <a
                 href="#"
                 className="inline-block p-2 rounded-t-lg hover:text-gray-600 hover:bg-gray-50"

@@ -62,7 +62,9 @@ const Dashboard = () => {
               {NextPage > 0 ? <LeftStepper setNextPage={setNextPage} /> : null}
             </div>
             <div className="lg:p-5 p-3 w-[100%]">
-              {NextPage != 0 && <BreadcrumpsEndpoint last={content} />}
+              {NextPage === 1 && <Breadcrumps last={content} />}
+              {(NextPage > 1 && NextPage<6) && <BreadcrumpsDoc last={content} />}
+              {(NextPage>=6) && <BreadcrumpsEndpoint last={content} />}
               {NextPage === 4 && (
                 <div class="flex my-3 border-2 rounded-md border-gray-200">
                   <span class="inline-flex mr-2 py-1 items-center px-10 text-NavColor font-semibold text-[16px] border-r-2 border-gray-300 rounded-l-md">
@@ -78,7 +80,7 @@ const Dashboard = () => {
               )}
               {NextPage > 1 ? (
                 <div>
-                  <Tabs NextPage={NextPage} />
+                  <Tabs NextPage={NextPage} setNext={setNextPage} setContent={ setContent } />
                 </div>
               ) : NextPage != 0 ? (
                 <div>
@@ -104,7 +106,7 @@ const Dashboard = () => {
               {NextPage === 7 && <Request_Frontend setContent={setContent} />}
             </div>
           </div>
-          {/* <div className="lg:flex lg:flex-col hidden w-[24%]">
+          <div className="lg:flex lg:flex-col hidden w-[24%]">
             {NextPage === 0 ? (
               <div>
                 <UpperSideInfo />
@@ -113,7 +115,7 @@ const Dashboard = () => {
             ) : (
               <RightViewListing />
             )}
-          </div> */}
+          </div>
         </div>
       </div>
     </>

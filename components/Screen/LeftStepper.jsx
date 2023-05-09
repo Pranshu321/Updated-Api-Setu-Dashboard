@@ -8,10 +8,10 @@ const LeftStepper = ({ setNextPage }) => {
   const [drop, setdrop] = useState(false);
   return (
     <div className="flex flex-col">
-      {/* <div className="bg-[#E1F0FB] text-NavColor font-semibold p-3 mt-4 ml-4 rounded-md">
+      <div className="bg-[#E1F0FB] text-NavColor font-semibold p-3 mt-4 ml-4 rounded-md">
         Publishing steps
-      </div> */}
-      <div className="bg-[#E5F0E0] flex items-center gap-x-3 text-sm text-[#52A62B] font-semibold p-3 mt-4 ml-4 rounded-md">
+      </div>
+      {/* <div className="bg-[#E5F0E0] flex items-center gap-x-3 text-sm text-[#52A62B] font-semibold p-3 mt-4 ml-4 rounded-md">
         <span>
           <svg
             width="16"
@@ -41,9 +41,9 @@ const LeftStepper = ({ setNextPage }) => {
             />
           </svg>
         </span>
-      </div>
+      </div> */}
 
-      <div class="text-NavColor ml-3 cursor-pointer border-2 flex justify-center items-center py-1 gap-x-2 mt-3 border-NavColor rounded-md font-bold">
+      {/* <div class="text-NavColor ml-3 cursor-pointer border-2 flex justify-center items-center py-1 gap-x-2 mt-3 border-NavColor rounded-md font-bold">
         <span>
           <svg
             width="16"
@@ -65,7 +65,7 @@ const LeftStepper = ({ setNextPage }) => {
 
       <div class="bg-gray-200 text-sm text-[#6B7280] py-2 px-4 rounded-md mt-3 ml-3 flex items-center justify-center">
         Current: v1.0.0
-      </div>
+      </div> */}
       <ul
         className="relative m-0 w-full list-none overflow-hidden p-0 transition-[height] duration-200 ease-in-out"
         data-te-stepper-init=""
