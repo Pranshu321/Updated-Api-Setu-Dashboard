@@ -4,7 +4,7 @@ const Tabs = ({ NextPage , setContent , setNext }) => {
   return (
     <div>
       <ul className="flex flex-wrap gap-x-5 text-sm font-medium text-center text-gray-500 border-b border-gray-200">
-        <li className="mr-2" onClick={()=>{setContent("Documentation"); setNext(1); }}>
+        <li className="mr-2" onClick={()=>{setContent("Documentation");  }}>
           <a
             href="#"
             aria-current="page"
@@ -13,7 +13,7 @@ const Tabs = ({ NextPage , setContent , setNext }) => {
             Documentation
           </a>
         </li>
-        <li className="mr-2" onClick={()=>{setContent("Authentication"); NextPage>2?setNext(5):setNext(3); }}>
+        <li className="mr-2" onClick={()=>{setContent("Authentication"); }}>
           <a
             href="#"
             className="inline-block p-2 rounded-t-lg hover:text-gray-600 hover:bg-gray-50"
