@@ -22,15 +22,17 @@ import IconSidebar from "../utils/IconSidebar";
 import ApiAnalytics from "../components/Screen/ApiAnalytics";
 import BreadcrumpsDoc from "../utils/Breadcrumps/BreadcrumpsDoc";
 import BreadcrumpsEndpoint from "../utils/Breadcrumps/BreadcrupsEndpoint";
+import Modals from "../utils/Modals";
 
 const Dashboard = () => {
   const [drop, setdrop] = useState(true);
   const [details, setdetails] = useState(false);
   const [NextPage, setNextPage] = useState(0);
   const [content, setContent] = useState("");
+  const [modal , setModal] = useState(false);
   return (
     <>
-      <div>
+      <div onClick={() => setModal(!modal)}>
         <Header drop={drop} setdrop={setdrop} />
       </div>
       <div className="flex">
@@ -63,8 +65,10 @@ const Dashboard = () => {
             </div>
             <div className="lg:p-5 p-3 w-[100%]">
               {NextPage === 1 && <Breadcrumps last={content} />}
-              {(NextPage > 1 && NextPage<6) && <BreadcrumpsDoc last={content} />}
-              {(NextPage>=6) && <BreadcrumpsEndpoint last={content} />}
+              {NextPage > 1 && NextPage < 6 && (
+                <BreadcrumpsDoc last={content} />
+              )}
+              {NextPage >= 6 && <BreadcrumpsEndpoint last={content} />}
               {NextPage === 4 && (
                 <div class="flex my-3 border-2 rounded-md border-gray-200">
                   <span class="inline-flex mr-2 py-1 items-center px-10 text-NavColor font-semibold text-[16px] border-r-2 border-gray-300 rounded-l-md">
@@ -80,7 +84,11 @@ const Dashboard = () => {
               )}
               {NextPage > 1 ? (
                 <div>
-                  <Tabs NextPage={NextPage} setNext={setNextPage} setContent={ setContent } />
+                  <Tabs
+                    NextPage={NextPage}
+                    setNext={setNextPage}
+                    setContent={setContent}
+                  />
                 </div>
               ) : NextPage != 0 ? (
                 <div>
@@ -93,6 +101,17 @@ const Dashboard = () => {
                   </a>
                 </div>
               ) : null}
+              <div>
+                <div
+                  className={`absolute ${
+                    modal ? "block" : "hidden"
+                  } top-1/3 left-1/4`}
+                >
+                  <div className="max-h-max">
+                    <Modals setModal={setModal} />
+                  </div>
+                </div>
+              </div>
               {NextPage === 1 ? <ManualForm NextPage={setNextPage} /> : null}
               {NextPage === 2 || NextPage === 4 ? (
                 <Documentation_Form setContent={setContent} />
