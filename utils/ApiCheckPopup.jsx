@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const check = () => {
+const ApiCheckPopup = () => {
   return (
     <div className="w-full bg-white min-h-screen flex flex-col gap-y-2 justify-center items-center">
       <div className="flex items-center justify-center w-1/2">
@@ -140,6 +140,6 @@ const check = () => {
       </div>
     </div>
   );
-}
+};
 
-export default check
+export default ApiCheckPopup;

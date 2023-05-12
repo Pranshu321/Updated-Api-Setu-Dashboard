@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 import LowerTags from "../components/LowerTags";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/SideNavigation/Sidebar";
 import SideInfo from "../components/SideInfo";
 import UpperSideInfo from "../components/UpperSideInfo";
 import Videos from "../components/Videos";
@@ -18,7 +18,7 @@ import Headers_Design from "../components/Screen/EndPoint Documentation/Headers_
 import Request_Frontend from "../components/Screen/Request Body/Request_Frontend";
 import SideResponse from "../components/Screen/Request Body/SideResponse";
 import FullRequestOverview from "../components/Screen/Request Body/FullRequestOverview";
-import IconSidebar from "../utils/IconSidebar";
+import IconSidebar from "../components/SideNavigation/IconSidebar";
 import ApiAnalytics from "../components/Screen/ApiAnalytics";
 import BreadcrumpsDoc from "../utils/Breadcrumps/BreadcrumpsDoc";
 import BreadcrumpsEndpoint from "../utils/Breadcrumps/BreadcrupsEndpoint";
